@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<div class="container">
+<body>
+    <h1>Lista de Tarefas</h1>
+    <form id="form-tarefa">
+        <input type="text" id="tarefa" required placeholder="Digite a tarefa" name="tarefa">
+        <button type="submit">Adicionar</button>
+    </form>
+    
+    <ol id="lista-tarefas"></ol>
+    <script>
+        $(document).ready(function() {
+          // Adiciona uma nova tarefa à lista quando o formulário é enviado
+        $('#form-tarefa').submit(function(event) {
+            event.preventDefault(); // Previne o envio do formulário
+            var tarefa = $('#tarefa').val(); // Obtém o valor do campo de entrada
+            $('#lista-tarefas').append('<li>' + tarefa + '</li>'); // Adiciona um novo item à lista
+            $('#tarefa').val(''); // Limpa o campo de entrada
+        });
+    
+          // Adiciona um evento de clique a cada item da lista
+        $('#lista-tarefas').on('click', 'li', function() {
+            // Aplica o efeito de linha através do texto quando o item é clicado
+            $(this).css('text-decoration', 'line-through');
+        });
+        });
+    </script>
+</body>
+</div>
+</html>
+
