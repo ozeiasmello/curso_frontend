@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #9dd9b6;
     box-sizing: border-box;
     font-family: sans-serif;
 }
@@ -23,15 +24,16 @@ input, textarea, button {
     resize: none;
 }
 
-button {
-    background-color: #2ecc71;
-    border: none;
+input  {
+    background-color: #e6ebe8;
+    border: 1px solid;
     text-transform: uppercase;
-    color: #fff;
+    color: rgb(12, 12, 12);
     font-weight: bold;
     font-size: 18px;
     font-style: italic;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
