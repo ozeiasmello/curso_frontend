@@ -1,26 +1,15 @@
 $(document).ready(function() {
-    // Adicionar uma tarefa na lista
-    $('#form-tarefas').submit(function(event) {
-      // Prevenir o comportamento padrão do formulário
-      event.preventDefault();
-      
-      // Obter o valor do campo "tarefa"
-      var tarefa = $('#tarefa').val();
-      
-      // Adicionar um item à lista de tarefas
-      $('#lista-tarefas').append('<li>' + tarefa + '</li>');
-      
-      // Limpar o campo "tarefa"
-      $('#tarefa').val('');
-    });
-    
-    // Limpar a lista de tarefas
-    $('#btn-limpar').click(function() {
-      $('#lista-tarefas').empty();
-    });
-    
-    // Aplicar uma linha em cima do texto dos itens da lista
-    $('#lista-tarefas').on('click', 'li', function() {
-      $(this).toggleClass('concluido');
-  });
+  // Adiciona uma nova tarefa à lista quando o formulário é enviado
+$('#form-tarefa').submit(function(event) {
+    event.preventDefault(); // Previne o envio do formulário
+    var tarefa = $('#tarefa').val(); // Obtém o valor do campo de entrada
+    $('#lista-tarefas').append('<li>' + tarefa + '</li>'); // Adiciona um novo item à lista
+    $('#tarefa').val(''); // Limpa o campo de entrada
+});
+
+  // Adiciona um evento de clique a cada item da lista
+$('#lista-tarefas').on('click', 'li', function() {
+    // Aplica o efeito de linha através do texto quando o item é clicado
+    $(this).css('text-decoration', 'line-through');
+});
 });
