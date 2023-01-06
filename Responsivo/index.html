@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <div class="container container-flex">
+            <h1>EBAC Shoes</h1>
+        </div>
+        <div class="botao-menu">
+        <button type="button">Abrir menu</button>
+        </div>
+        <nav class="container">
+            <ul class="menu">
+                <li>
+                    Sobre a loja
+                    <ul class="submenu"></ul>
+                </li>
+                <li>
+                    Produtos
+                    <ul class="submenu"></ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </nav>
+    </header>
+    <div class=" container conteudo">
+        <main>
+            <section>
+                <div class="container container-flex">
+                    <img src="./imagens/loja.png" alt="Imagem loja" />
+                <div>
+                    <h2>Sobre a loja</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab debitis perferendis placeat fugit laborum.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab debitis perferendis placeat fugit laborum.
+                    </p>
+                </div>
+            </article>
+            </section>
+            <section>
+                <h2>Produtos</h2>
+                <div class="noticias">
+                    <article class="noticia">
+                        <h2>Tênis Adidas</h2>
+                        <a href="#">
+                            <img src="./imagens/adidas.png" />
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab debitis perferendis placeat fugit laborum.
+                            </h4>
+                            <button type="button">Comprar</button>
+                        </a>
+                    </article>
+                    <article class="noticia">
+                        <h2>Tênis Nike</h2>
+                        <a href="#">
+                            <img src="./imagens/nike.png" />
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab debitis perferendis placeat fugit laborum.
+                            </h4>
+                            <button type="button">Comprar</button>
+                        </a>
+                    </article>
+                    <article class="noticia">
+                        <h2>Tênis Puma</h2>
+                        <a href="#">
+                            <img src="./imagens/puma.png" />
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab debitis perferendis placeat fugit laborum.
+                            </h4>
+                            <button type="button">Comprar</button>
+                        </a>
+                    </article>
+                    <article class="noticia">
+                        <h2>Tênis Vans</h2>
+                        <a href="#">
+                            <img src="./imagens/vans.png" />
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab debitis perferendis placeat fugit laborum.
+                            </h4>
+                            <button type="button">Comprar</button>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.botao-menu button').click(function() {
+                $('.menu').slideToggle();
+            })
+        })
+    </script>
+    <footer>
+        <div class="container container-flex">
+            <p>
+                2023 &copy; EBAC Shoes - Todos os direitos reservados 
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
