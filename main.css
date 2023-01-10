@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .noticia {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
